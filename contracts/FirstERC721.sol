@@ -27,7 +27,7 @@ contract FirstERC721 is ERC721 {
     //mint one NFT with unique tokenURI
     function mintNFT(string memory tokenURI) public payable {
         //check if the sent ETH is bigger than 0.01 ether
-        require(msg.value > 0.01 ether, "Not Enough Money");
+        require(msg.value >= 0.01 ether, "Not Enough Money");
         //increase tokenID
         tokenCounter ++;
         //access the value
